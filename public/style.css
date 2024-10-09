@@ -1,0 +1,1209 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  /* list-style: none; */
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main: #fe1716;
+  --bg-color: #fff;
+  --text-color: #fff;
+  --second-color: #4b4b4b;
+  --third-color: #000;
+  --big-font: 5rem;
+  --h2-font: 2.5rem;
+  --h4-font: 22.5px;
+  --p-font: 1.2rem;
+  --span: #fe1716;
+  --contact: #353535;
+  --services-content: 27px;
+  --vehicles-img: 135px;
+  --h3-font: 23px;
+  --icon: 25px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  align-items: center;
+  padding: 2px 12%;
+  border-bottom: 4.5px solid var(--main);
+  transition: all 0.7s ease;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(-75px);
+}
+
+header.headerload {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.nav-top {
+  position: fixed;
+  background-color: var(--main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0px 12.5%;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0;
+  transform: translateY(-75px);
+  transition: all 0.7s ease;
+  /* margin-bottom: 100px; */
+}
+
+.nav-top.navtopload {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+span {
+  color: var(--span);
+}
+
+.logo {
+  pointer-events: none;
+}
+
+.logo img {
+  height: 105px;
+  margin-top: 5px;
+}
+
+.navlist {
+  display: flex;
+  list-style: none;
+}
+
+.navlist a {
+  color: var(--second-color);
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 17px;
+  transition: all 0.45s ease;
+  padding: 22px;
+  width: 100%;
+  border-radius: 3.9px;
+}
+
+.navlist a:hover {
+  color: var(--text-color);
+  background-color: var(--main);
+}
+
+.navlist a.active {
+  color: var(--text-color);
+  background-color: var(--main);
+}
+
+#menu-icon {
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+  margin-left: 25px;
+  display: none;
+  padding: 3px;
+  background-color: var(--main);
+  color: var(--text-color);
+  border-radius: 3.9px;
+}
+
+header.sticky {
+  box-shadow: rgba(0, 0, 0, 0.35) 1px 2.5px 15px;
+}
+
+section {
+  padding: 100px 11% 48px;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /* background-color: #ccc; */
+  background-image: url(../images/banner-home2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: top;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  /* margin-bottom: -100px; */
+}
+
+.home-text h1 {
+  margin: 0 0 35px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: end;
+  color: var(--text-color);
+}
+
+.home-text p {
+  color: #ffffff;
+  font-size: 1.53rem;
+  line-height: 1;
+  /* margin-bottom: 40px; */
+  font-weight: 500;
+}
+
+.title {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(50px);
+}
+
+.sub-title {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(70px);
+}
+
+.title.titleload {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.sub-title.titleload {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin-left: 70px;
+  margin-right: 90px;
+}
+
+.about-img img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.about-text h2 {
+  font-size: var(--h2-font);
+  line-height: 1;
+}
+
+.about-text h4 {
+  font-size: var(--h4-font);
+  font-weight: 600;
+  color: var(--third-color);
+  line-height: 1.7;
+  margin: 15px 0 35px;
+}
+
+.about-text p {
+  color: var(--second-color);
+  font-size: var(--p-font);
+  line-height: 1.8;
+}
+
+.services {
+  background-image: url(../images/services.png);
+  /* height: 75vh; */
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center;
+  color: var(--text-color);
+}
+
+.services-main-text h2 {
+  font-size: var(--h2-font);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.services-main-text p {
+  text-align: center;
+  line-height: 1;
+  font-size: var(--p-font);
+  font-weight: 500;
+}
+
+.services-content {
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* align-items: flex-start; */
+  font-size: var(--services-content);
+  font-weight: 600;
+  font-style: italic;
+  gap: 1rem;
+  /* height: 50vh; */
+  margin-top: 40px;
+}
+
+.services-content ul li {
+  margin-bottom: 25px;
+}
+
+.vehicles-main-text h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: var(--h2-font);
+}
+
+.vehicles-main-text p {
+  text-align: center;
+  margin-bottom: 65px;
+  font-size: var(--p-font);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.vehicles-content {
+  place-items: center;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, auto)); */
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  /* font-size: 27px;
+  font-weight: 600;
+  gap: 1rem;
+  height: 50vh;
+  margin-top: 30px; */
+}
+
+.vehicles-logo img {
+  width: var(--vehicles-img);
+  pointer-events: none;
+}
+
+.vehicles-logo h3 {
+  margin-top: 5px;
+  margin-bottom: 66px;
+  font-size: var(--h3-font);
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact {
+  background-color: var(--contact);
+  color: var(--text-color);
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  gap: 18rem;
+}
+
+.contact-content .contact-left h2 {
+  font-size: var(--h2-font);
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.contact-content .contact-left p {
+  color: var(--text-color);
+  font-size: var(--p-font);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.contact-content .list-contact li {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 8px;
+  line-height: 1.9;
+  transition: all 1s ease;
+}
+
+.contact-content .list-contact li:hover {
+  transform: translateX(10px);
+  cursor: default;
+}
+
+.contact-content .list-contact li i {
+  margin-right: 5px;
+  font-size: var(--icon);
+}
+
+.contact-content .list-contact {
+  margin-bottom: 20px;
+}
+
+.contact-content .medsos-icon img {
+  width: 70px;
+  padding: 10px;
+  transition: all 1s ease;
+  margin-right: 10px;
+}
+
+.contact-content .medsos-icon img:hover {
+  box-shadow: 0 0 5px 5px var(--text-color);
+}
+
+.contact-content .contact-right {
+  display: flex;
+  align-items: center;
+}
+
+.contact-content .contact-right iframe {
+  width: 600px;
+  height: 450px;
+}
+
+.footer-copy {
+  background: #222222;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-copy p {
+  font-size: var(--p-font);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* WEB RESPONSIVE */
+/* ////////////// */
+/* ////////////// */
+
+/* >= 280px - <= 374.98px (Extra Small HP Potrait ) */
+@media only screen and (min-width: 280px) and (max-width: 374.98px) {
+  :root {
+    --h2-font: 1.3rem;
+    --h4-font: 14.5px;
+    --p-font: 0.83rem;
+    --services-content: 13.5px;
+    --vehicles-img: 65px;
+    --h3-font: 12px;
+    --icon: 16.5px;
+  }
+  .nav-top {
+    max-width: 100%;
+    padding: 0.5px 2.7%;
+    font-size: 12px;
+    height: 25px;
+  }
+  header {
+    padding: 0.5px 2.5%;
+    max-width: 100%;
+    margin-top: 24.5px;
+  }
+  .navlist {
+    display: none;
+  }
+  #menu-icon {
+    font-size: 30px;
+    display: block;
+  }
+  .logo img {
+    height: 57px;
+  }
+  .home {
+    background-image: url(../images/banner-home15.jpg);
+  }
+  .home-text h1 {
+    font-size: 1rem;
+    line-height: 0.1;
+    text-align: end;
+  }
+  .home-text p {
+    font-size: 0.85rem;
+    text-align: end;
+    line-height: 1.5;
+    /* font-weight: 400; */
+  }
+  .about {
+    display: flex;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .about-img img {
+    display: none;
+  }
+  .about-text h2 {
+    text-align: center;
+  }
+  .about-text h4 {
+    text-align: center;
+    line-height: 1;
+    margin: 15px 0 20px;
+  }
+  .about-text p {
+    text-align: justify;
+  }
+  .vehicles-content {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  }
+  .contact-content {
+    display: flex;
+  }
+  .contact-content .contact-left {
+    flex: 1;
+  }
+  .contact-content .contact-right {
+    display: none;
+  }
+  .contact-content .contact-left h2 {
+    text-align: center;
+  }
+  .contact-content .contact-left p {
+    text-align: justify;
+  }
+  .contact-content .contact-left .list-contact li {
+    font-size: var(--p-font);
+  }
+  .contact-content .contact-left .medsos-icon img {
+    width: 53px;
+  }
+  .footer-copy p {
+    text-align: center;
+  }
+}
+
+/* >= 375px - <= 424.98px (Small HP Potrait ) */
+@media only screen and (min-width: 375px) and (max-width: 424.98px) {
+  :root {
+    --h2-font: 1.3rem;
+    --h4-font: 14.5px;
+    --p-font: 0.83rem;
+    --services-content: 13.5px;
+    --vehicles-img: 65px;
+    --h3-font: 12px;
+    --icon: 16.5px;
+  }
+  .nav-top {
+    max-width: 100%;
+    padding: 0.5px 2.7%;
+    font-size: 12px;
+    height: 25px;
+  }
+  header {
+    padding: 0.5px 2.5%;
+    max-width: 100%;
+    margin-top: 24.5px;
+  }
+  .navlist {
+    display: none;
+  }
+  #menu-icon {
+    font-size: 30px;
+    display: block;
+  }
+  .logo img {
+    height: 57px;
+  }
+  .home {
+    background-image: url(../images/banner-home10.jpg);
+  }
+  .home-text h1 {
+    font-size: 1.25rem;
+    line-height: 0.1;
+    text-align: end;
+  }
+  .home-text p {
+    font-size: 0.85rem;
+    text-align: end;
+    line-height: 1.5;
+    /* font-weight: 400; */
+  }
+  .about {
+    display: flex;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .about-img img {
+    display: none;
+  }
+  .about-text h2 {
+    text-align: center;
+  }
+  .about-text h4 {
+    text-align: center;
+    line-height: 1;
+    margin: 15px 0 20px;
+  }
+  .about-text p {
+    text-align: justify;
+  }
+  .vehicles-content {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  }
+  .contact-content {
+    display: flex;
+  }
+  .contact-content .contact-left {
+    flex: 1;
+  }
+  .contact-content .contact-right {
+    display: none;
+  }
+  .contact-content .contact-left h2 {
+    text-align: center;
+  }
+  .contact-content .contact-left p {
+    text-align: justify;
+  }
+  .contact-content .contact-left .list-contact li {
+    font-size: var(--p-font);
+  }
+  .contact-content .contact-left .medsos-icon img {
+    width: 53px;
+  }
+}
+
+/* >= 425px - <= 509.98px (Small HP Potrait ) */
+@media only screen and (min-width: 425px) and (max-width: 509.98px) {
+  :root {
+    --h2-font: 1.5rem;
+    --h4-font: 17px;
+    --p-font: 0.9rem;
+    --services-content: 16px;
+    --vehicles-img: 85px;
+    --h3-font: 16px;
+    --icon: 19.7px;
+  }
+  .nav-top {
+    max-width: 100%;
+    padding: 0.5px 2.7%;
+    font-size: 13.5px;
+    height: 30px;
+  }
+  header {
+    padding: 0.5px 2.5%;
+    max-width: 100%;
+    margin-top: 29px;
+  }
+  .navlist {
+    display: none;
+  }
+  #menu-icon {
+    font-size: 30px;
+    display: block;
+  }
+  .logo img {
+    height: 64px;
+  }
+  .home {
+    background-image: url(../images/banner-home9.jpg);
+  }
+  .home-text h1 {
+    font-size: 1.45rem;
+    line-height: 0.1;
+    text-align:end;
+  }
+  .home-text p {
+    font-size: 0.9rem;
+    text-align: end;
+    line-height: 1.5;
+    /* font-weight: 400; */
+  }
+  .about {
+    display: flex;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .about-img img {
+    display: none;
+  }
+  .about-text h2 {
+    text-align: center;
+  }
+  .about-text h4 {
+    text-align: center;
+    line-height: 1;
+    margin: 15px 0 20px;
+  }
+  .about-text p {
+    text-align: justify;
+  }
+  .vehicles-content {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  }
+  .contact-content {
+    display: flex;
+  }
+  .contact-content .contact-left {
+    flex: 1;
+  }
+  .contact-content .contact-right {
+    display: none;
+  }
+  .contact-content .contact-left h2 {
+    text-align: center;
+  }
+  .contact-content .contact-left p {
+    text-align: justify;
+  }
+  .contact-content .contact-left .list-contact li {
+    font-size: var(--p-font);
+  }
+  .contact-content .contact-left .medsos-icon img {
+    width: 60px;
+  }
+}
+
+/* >= 510px - <= 576px (HP potrait) */
+@media only screen and (min-width: 510px) and (max-width: 575.98px) {
+  :root {
+    --h2-font: 1.9rem;
+    --h4-font: 19px;
+    --p-font: 1.1rem;
+    --services-content: 19.5px;
+    --vehicles-img: 98px;
+    --h3-font: 19px;
+    --icon: 23px;
+  }
+  .nav-top {
+    max-width: 100%;
+    padding: 0.5px 2.7%;
+    font-size: 16.5px;
+    height: 45px;
+  }
+  header {
+    padding: 0.5px 2.5%;
+    max-width: 100%;
+    margin-top: 44px;
+  }
+  .navlist {
+    display: none;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .logo img {
+    height: 88px;
+  }
+  .home {
+    background-image: url(../images/banner-home14.jpg);
+  }
+  .home-text h1 {
+    font-size: 1.45rem;
+    line-height: 0.1;
+  }
+  .home-text p {
+    font-size: 1.1rem;
+    text-align: end;
+    line-height: 1.5;
+    /* font-weight: 400; */
+  }
+  .about {
+    display: flex;
+    margin: 0;
+  }
+  .about-img img {
+    display: none;
+  }
+  .about-text h2 {
+    text-align: center;
+  }
+  .about-text h4 {
+    text-align: center;
+    line-height: 1;
+    margin: 15px 0 23px;
+  }
+  .about-text p {
+    text-align: justify;
+  }
+  .vehicles-content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  }
+  .contact-content {
+    display: flex;
+  }
+  .contact-content .contact-left {
+    flex: 1;
+  }
+  .contact-content .contact-right {
+    display: none;
+  }
+  .contact-content .contact-left h2 {
+    text-align: center;
+  }
+  .contact-content .contact-left p {
+    text-align: justify;
+  }
+  .contact-content .contact-left .list-contact li {
+    font-size: var(--p-font);
+  }
+  .contact-content .contact-left .medsos-icon img {
+    width: 60px;
+  }
+}
+
+/* >= 576px - <= 767.98px (HP landscape & tablet potrait) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  :root {
+    --h2-font: 2rem;
+    --h4-font: 20px;
+    --p-font: 1.1rem;
+    --services-content: 20px;
+    --vehicles-img: 100px;
+    --h3-font: 19px;
+    --icon: 23px;
+  }
+  .nav-top {
+    max-width: 100%;
+    padding: 0.2px 4%;
+    font-size: 0.9rem;
+    height: 37px;
+  }
+  header {
+    padding: 0.2px 4.5%;
+    max-width: 100%;
+    margin-top: 36.5px;
+  }
+  .navlist {
+    display: none;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .logo img {
+    height: 82px;
+  }
+  .home {
+    /* background-image: url(../images/banner-home7.jpg); */
+  }
+  .home-text h1 {
+    font-size: 2rem;
+    line-height: 0.1;
+  }
+  .home-text p {
+    font-size: 1.2rem;
+    text-align: end;
+    /* font-weight: 400; */
+    line-height: 1.4;
+  }
+  .about {
+    display: flex;
+    margin: 0;
+    margin-bottom: 43px;
+  }
+  .about-img img {
+    display: none;
+  }
+  .about-text h2 {
+    text-align: center;
+  }
+  .about-text h4 {
+    text-align: center;
+    line-height: 1;
+    margin: 15px 0 23px;
+  }
+  .about-text p {
+    text-align: justify;
+  }
+  .vehicles-content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  }
+  .contact-content {
+    display: flex;
+  }
+  .contact-content .contact-left {
+    flex: 1;
+  }
+  .contact-content .contact-right {
+    display: none;
+  }
+  .contact-content .contact-left h2 {
+    text-align: center;
+  }
+  .contact-content .contact-left p {
+    text-align: justify;
+  }
+  .contact-content .contact-left .list-contact li {
+    font-size: var(--p-font);
+  }
+  .contact-content .contact-left .medsos-icon img {
+    width: 60px;
+  }
+}
+
+/* >= 768px - <= 991.98px (Tablet landscape & desktop kecil) */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  :root {
+    --h2-font: 2.17rem;
+    --h4-font: 21px;
+    --p-font: 1.15rem;
+    --services-content: 20.7px;
+    --vehicles-img: 125px;
+    --h3-font: 20px;
+    --icon: 24px;
+  }
+  .nav-top {
+    max-width: 100%;
+    padding: 0.2px 4%;
+    font-size: 1rem;
+    height: 40px;
+  }
+  header {
+    padding: 0.2px 4.5%;
+    max-width: 100%;
+    margin-top: 39px;
+  }
+  .navlist {
+    display: none;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .logo img {
+    height: 86px;
+  }
+  .home {
+    /* background-image: url(../images/banner-home7.jpg); */
+  }
+  .home-text h1 {
+    font-size: 2.45rem;
+    line-height: 0.1;
+  }
+  .home-text p {
+    font-size: 1.3rem;
+    text-align: end;
+    /* font-weight: 400; */
+    line-height: 1.4;
+  }
+  .about {
+    display: flex;
+    margin: 0;
+    margin-bottom: 43px;
+  }
+  .about-img img {
+    display: none;
+  }
+  .about-text h2 {
+    text-align: center;
+  }
+  .about-text h4 {
+    text-align: center;
+    line-height: 1;
+    margin: 15px 0 23px;
+  }
+  .about-text p {
+    text-align: justify;
+  }
+  .vehicles-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+  .contact-content {
+    display: flex;
+  }
+  .contact-content .contact-left {
+    flex: 1;
+  }
+  .contact-content .contact-right {
+    display: none;
+  }
+  .contact-content .contact-left h2 {
+    text-align: center;
+  }
+  .contact-content .contact-left p {
+    text-align: justify;
+  }
+  .contact-content .contact-left .list-contact li {
+    font-size: var(--p-font);
+  }
+  .contact-content .contact-left .medsos-icon img {
+    width: 65.5px;
+  }
+}
+
+/* >= 992px - <= 1199.98px (Desktop) */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  :root {
+    --h2-font: 2.25rem;
+    --h4-font: 21px;
+    --p-font: 1.2rem;
+    --services-content: 21.5px;
+    --vehicles-img: 130px;
+    --h3-font: 22px;
+    --icon: 25px;
+  }
+  .nav-top {
+    max-width: 100%;
+    padding: 0.2px 4%;
+    font-size: 1rem;
+    height: 45px;
+  }
+  header {
+    padding: 0.2px 4.5%;
+    max-width: 100%;
+    margin-top: 44.5px;
+  }
+  .navlist {
+    display: flex;
+  }
+  .navlist a {
+    font-size: 13.5px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 3.9px;
+  }
+  #menu-icon {
+    display: none;
+  }
+  .logo img {
+    height: 90px;
+  }
+  .home {
+    /* background-image: url(../images/banner-home7.jpg); */
+  }
+  .home-text h1 {
+    font-size: 2.5rem;
+    line-height: 0.1;
+  }
+  .home-text p {
+    font-size: 1.35rem;
+    text-align: end;
+    /* font-weight: 400; */
+    line-height: 1.4;
+  }
+  .about {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 43px;
+  }
+  .about-img img {
+    max-width: 450px;
+  }
+  .about-text h4 {
+    line-height: 1;
+    margin: 15px 0 23px;
+  }
+  .about-text p {
+    text-align: justify;
+  }
+  .vehicles-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+  .contact-content {
+    display: flex;
+  }
+  .contact-content .contact-left {
+    flex: 1;
+  }
+  .contact-content .contact-right {
+    display: none;
+  }
+  .contact-content .contact-left h2 {
+    text-align: center;
+  }
+  .contact-content .contact-left p {
+    text-align: justify;
+  }
+  .contact-content .contact-left .list-contact li {
+    font-size: var(--p-font);
+  }
+  .contact-content .contact-left .medsos-icon img {
+    width: 65.5px;
+  }
+}
+
+/* >= 1200px - <= 1399.98px (Large Desktop, Wide Screen)*/
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  :root {
+    --h2-font: 2.25rem;
+    --h4-font: 21px;
+    --p-font: 1.2rem;
+    --services-content: 22px;
+    --vehicles-img: 120px;
+    --h3-font: 23px;
+    --icon: 25px;
+  }
+  .nav-top {
+    max-width: 100%;
+    padding: 0.2px 4%;
+    font-size: 1rem;
+    height: 45px;
+  }
+  header {
+    padding: 0.2px 4.5%;
+    max-width: 100%;
+    margin-top: 44.5px;
+  }
+  .navlist {
+    display: flex;
+  }
+  .navlist a {
+    font-size: 14.3px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 3.9px;
+  }
+  #menu-icon {
+    display: none;
+  }
+  .logo img {
+    height: 91px;
+  }
+  .home {
+    /* background-image: url(../images/banner-home7.jpg); */
+  }
+  .home-text h1 {
+    font-size: 2.5rem;
+    line-height: 0.1;
+  }
+  .home-text p {
+    font-size: 1.35rem;
+    text-align: end;
+    /* font-weight: 400; */
+    line-height: 1.4;
+  }
+  .about {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 43px;
+  }
+  .about-img img {
+    max-width: 450px;
+  }
+  .about-text h4 {
+    line-height: 1;
+    margin: 15px 0 23px;
+  }
+  .about-text p {
+    text-align: justify;
+  }
+  .vehicles-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+  .contact-content {
+    gap: 5rem;
+  }
+  .contact-content .contact-right iframe {
+    width: 100%;
+    height: 80%;
+  }
+  .contact-content .contact-left p {
+    text-align: justify;
+  }
+  .contact-content .contact-left .list-contact li {
+    font-size: var(--p-font);
+  }
+  .contact-content .contact-left .medsos-icon img {
+    width: 65.5px;
+  }
+}
+
+/* >= 1400px - <= 1599.98px (Large Device, Bukan Maen) */
+@media only screen and (min-width: 1400px) and (max-width: 1599.98px) {
+  :root {
+    --h2-font: 2.25rem;
+    --h4-font: 21px;
+    --p-font: 1.2rem;
+    --services-content: 22px;
+    --vehicles-img: 120px;
+    --h3-font: 23px;
+    --icon: 25px;
+  }
+  .nav-top {
+    max-width: 100%;
+    padding: 0.2px 4%;
+    font-size: 1rem;
+    height: 50px;
+  }
+  header {
+    padding: 0.2px 4.5%;
+    max-width: 100%;
+    margin-top: 49.5px;
+  }
+  .navlist {
+    display: flex;
+  }
+  .navlist a {
+    font-size: 16px;
+    padding: 22px;
+  }
+  #menu-icon {
+    display: none;
+  }
+  .logo img {
+    height: 100px;
+  }
+  .home {
+    /* background-image: url(../images/banner-home7.jpg); */
+  }
+  .home-text h1 {
+    font-size: 2.68rem;
+    line-height: 0.1;
+  }
+  .home-text p {
+    font-size: 1.45rem;
+    text-align: end;
+    /* font-weight: 400; */
+    line-height: 1.4;
+  }
+  .about {
+    margin: 0;
+  }
+  .about-img img {
+    max-width: 450px;
+  }
+  .about-text h4 {
+    line-height: 1;
+    margin: 15px 0 23px;
+  }
+  .about-text p {
+    text-align: justify;
+  }
+  .vehicles-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+  .contact-content {
+    gap: 5rem;
+  }
+  .contact-content .contact-right iframe {
+    width: 500px;
+    height: 400px;
+  }
+  .contact-content .contact-left p {
+    text-align: justify;
+  }
+  .contact-content .contact-left .list-contact li {
+    font-size: var(--p-font);
+  }
+  .contact-content .contact-left .medsos-icon img {
+    width: 70px;
+  }
+}
+
+/* >= 1600px (Very Large) */
+
+@media only screen and (min-width: 1600px) {
+  .about {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .about-img img {
+    width: 440px;
+  }
+}
